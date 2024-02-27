@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/52ea8de5a6.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c9b87a4bee.js" crossorigin="anonymous"></script>
+    <script src="script.js" async defer></script>
+    <title>Mi primera web</title>
+</head>
+<body>
+    <div class="container"><!--Contenedor de toda la página web -->
+        <header><!--Encabezado -->
+            <a href="index.html"><i class="fa-solid fa-code"></i></a>
+            <nav>
+                <input type="checkbox" id="check" /><label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+                <ul>
+                    <li><a href="acerca de mi/acercademi.html"><strong>Acerca de mi</strong></a></li><!--redirección a una página donde se encuentra información mia-->
+                    <li><a href="#cursos"><strong>Cursos</strong></a></li>
+                    <li><a href="certificados/index2.html"><strong>Certificados</strong></a></li><!--redirección a una página donde se encuentra los certificados-->
+                    <li><a href="#contacto"><strong>contacto</strong></a></li>
+                </ul>            
+            </nav>
+        </header>
+        <main id="seccion-principal"> <!--contenido pricncipal de la página-->
+            <section class="seccion-1">
+                <div class="acerca-de">
+                    <h2>Acerca de mi</h2>
+                    <p class="parrafo1">"¡Bienvenido a mi página! Aquí, aprenderás más sobre mí."</p>
+                    <p class="parrafo2">
+                        Me gusta trabajar en equipo apoyando en lo que pueda, habilidad que potencie gracias al curso de Jovenes a Programar.
+                        Me comunico de forma asertiva, destreza que pude mejorar gracias a la experiencia de trabajar en el proyecto "unidad del censo 2023".
+                        Si quieres conocerme un poco más ve al apartado de "Acerca de Mi".                    
+                    </p>
+                </div>
+                <div class="acerca-imagen"> 
+                    <img src="img/imghero-img.png" alt="imagen personal">
+                </div>
+            </section>
+            <section class="seccion-2">
+                <img src="img/imagen acerca iamgen.jpg" alt="imagen de carrusel">
+            </section>
+        </main>  
+        <div id="cursos" class="cursos"> <!--Div con los cursos realizados separados por cards-->
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/JaP.png" alt="JaP">
+                <h4>Jovenes a Programar</h4>
+                <p>Curso de 1 año. Distribuido en 2 fases. La fase 1 se baso en tres pilares: Competencias transversales, inglés e introducción a la programación. La fase 2 fue ramificación en Testing donde se realizó testing de caja negra y blanca, testing positivo y negativo, testing de regresión y de base de datos. Se realizo distintas documentaciones y un proyecto final disponible en <strong><a href="https://github.com/EiasMunch/Porfolio.git">Github</a></strong>. El certificado del curso se encuentra disponible en el apartado de certificados</p>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/foto2.png" alt="Yo puedo programar">
+                <h4>Junior Achievement</h4>
+                <p>Curso de 1 mes y medio. Se baso encreación de páginas web mediante HTML y CSS. También se conto con talleres de habilidades blandas. El certificado del curso se encuentra disponible en el apartado de certificados</p>            
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/foto3.png" alt="EGG">
+                    <h4>EGG mediante Jovenes a Programar</h4>
+                    <p>Curso de 2 meses. Realización de págians web mediante HTML, CSS, JavaScript. Se conto con competencias transversales e inglés. El certificado del curso se encuentra disponible en el apartado de certificados</p>
+                </div>
+            </div>
+        </div>
+        <footer id="contacto"><!--Pie de página con diversos metodos de contactos-->
+            <h3>Contactame</h3>
+            <ul>
+                <li><a href="formularios/forms.HTML">Formulario</a></li>
+                <li><a href="https://www.linkedin.com/in/elias-munch-caballero/">Linkedin</a></li>
+                <li><a href="https://www.instagram.com/elias_munch_/">Instagram</a></li>
+                <li><a href="mailto:eliasmunch10@gmail.com">Mail</a></li>
+                <li>098635388</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html

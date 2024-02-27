@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ejemplo Formulario</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <footer class="form-header">
+        <h1>Contactanos</h1>
+        <p><em>¡Esperamos tu consulta!</em></p>
+    <form action="" method="get" class="formulario" id="form"> 
+        <div class="form-row">
+            <label for="nombre">Nombre</label><input id="nombre" name="nombre" placeholder="Juan" type="text" required />
+        </div>
+        <div class="form-row">
+            <label for="apellido">Apellido</label><input id="apellido" name="apellido" placeholder="Carlos" type="text" />
+        </div>
+        <div class="form-row">
+            <label for="email">Email</label><input id="email" name="email" type="email" placeholder="Juanp@gmail.com" required/>
+        </div>
+        <div class="form-row">
+            <label for="direccion">Departamento</label><input id="direccion" name="direccion" placeholder="San José" type="text" />
+        </div>
+        <div class="form-row">
+            <label for="telefono">Telefono</label><input id="telefono" name="telefono" type="tel" placeholder="123456789"/>
+        </div>
+        <div class="form-row">
+            <label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" placeholder="Text..."></textarea>
+        </div>
+        <div class="form-row">
+            <button>Enviar</button>
+        </div>
+        <p class="alertas" id="alertas"></p>
+    </form>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
