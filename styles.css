@@ -191,7 +191,7 @@ h2 {
 }
 .card p{
     text-align: justify;
-    font-size: 15px;
+    font-size: 12px;
 }
 .card img {
     width: 60%;
@@ -206,6 +206,9 @@ h2 {
 @media(min-width:768px){
     .card-container{
         width: 45%;
+    }
+    .card p{
+        font-size: 15px;
     }
 }
 /*-*****************Pantallas de minimo 1024px********************-*/
