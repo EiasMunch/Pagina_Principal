@@ -1,8 +1,17 @@
+// Encuentra el botón de menú responsive y agrega un listener
+const menuResponsiveButton = document.querySelector(".checkbtn");
 
-//Le agrega una class al encabezado para agregarle diferente estilo cuando checkbtn esta activo//
-let menu_responsive = document.querySelector(".checkbtn");
+if (menuResponsiveButton) {
+    menuResponsiveButton.addEventListener("click", toggleNavBar);
+}
 
-menu_responsive.onclick = function () {
-navBar = document.querySelector("header");
-navBar.classList.toggle("active");
-};
+// Función para cambiar la clase "active" en el encabezado
+function toggleNavBar() {
+    const navBar = document.querySelector("header");
+
+    if (navBar) {
+        navBar.classList.toggle("active");
+    }
+}
+
+

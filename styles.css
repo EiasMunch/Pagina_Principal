@@ -1,45 +1,72 @@
-/*-*********************Contenido general CSS*********************-*/
-*{
+/* Contenido general CSS */
+* {
     text-decoration: none;
     list-style-type: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #F8EBEE;
+
+:root {
+    --main-background-color: #F8EBEE;
+    --header-background-color: #3C485E;
+    --header-text-color: #BFB5D7;
+    --nav-text-color: #FFF;
+    --nav-font-size: 1.5em;
+    --link-color: goldenrod;
+    --footer-background-color: #3C485E;
+    --footer-text-color: azure;
 }
-.container{
+
+body {
+    background-color: var(--main-background-color);
+}
+.container {
     width: 100%;
 }
-/*-***********************Encabezado******************************-*/
-header{
-    background-color:#3C485E;
+
+/* Encabezado */
+header {
+    background-color: var(--header-background-color);
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
-header a i{
-    color:#BFB5D7;
+
+header i {
+    color: var(--header-text-color);
     font-size: 1.5em;
 }
+
 header nav ul {
     display: flex;
     gap: 3.5em;
     padding-right: 40px;
 }
-header nav ul a{
-    color:rgb(255, 253, 253);
+
+header nav a {
+    color: var(--nav-text-color);
+    font-size: var(--nav-font-size);
+    position: relative;
+    transition: box-shadow 0.3s;
 }
-header nav ul li{
+
+header nav ul a:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Añadido para la sombra al pasar el mouse */
+}
+
+header nav li {
     font-size: 1.5em;
 }
-/*-*****************************CHECK*****************************-*/
+
+/* CHECK */
 #check {
     display: none;
 }
-.checkbtn{
+
+.checkbtn {
     font-size: 25px;
     color: #3C485E;
     line-height: 80px;
@@ -47,18 +74,24 @@ header nav ul li{
     display: none;
     float: right;
     cursor: pointer;
+    position: absolute; /* Agregado */
+    bottom: 10px; /* Ajustado el valor para separar del borde inferior */
+    right: 10px; /* Ajustado el valor para separar del borde derecho */
 }
-/*-*****************Pantallas de maximo 768px*********************-*/
-@media(max-width:768px){
-    .checkbtn{
+
+/* Pantallas de máximo 768px */
+@media(max-width:768px) {
+    .checkbtn {
         display: block;
-        color: #F8EBEE
+        color: #F8EBEE;
     }
-    .active{
+
+    .active {
         position: fixed;
         width: 100%;
     }
-    header ul{
+
+    header ul {
         position: fixed;
         text-align: center;
         width: 100%;
@@ -67,117 +100,137 @@ header nav ul li{
         height: 100vh;
         background-color: #606369;
         transition: all 0.5s;
-    } 
-    #check:checked ~ ul{
+    }
+
+    #check:checked ~ ul {
         left: 0%;
         display: block;
     }
-    header nav ul li{
+
+    header nav ul li {
         display: block;
         margin: 75px 0;
         line-height: 20px;
         opacity: 1;
     }
-    header nav ul li a{
+
+    header nav ul li a {
         font-size: 30px;
     }
-    #check:checked ~ .checkbtn{
+
+    #check:checked ~ .checkbtn {
         color: #c9909d;
-    } 
-    header a i{
-        margin-left: 25px;
-        color:#F8EBEE;
     }
-    header{
-        background-color:#000000 ;
-    }   
+
+    header a i {
+        margin-left: 25px;
+        color: #F8EBEE;
+    }
+
+    header {
+        background-color: #000000;
+    }
 }
-/*-*********************seccion-principal*************************-*/
+
+/* Sección principal */
 h2 {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 25px;
     margin: 5px;
 }
+
 .parrafo1, .parrafo2 {
     font-size: 20px;
     margin: 5px;
-    text-align: center; 
+    text-align: center;
 }
 
-.parrafo2{
+.parrafo2 {
     border: 1px solid black;
     padding: 1%;
     background-color: whitesmoke;
 }
 
-.acerca-imagen img{
+.acerca-imagen img {
     width: 100%;
     border-radius: 5%;
 }
-.acerca-imagen{
+
+.acerca-imagen {
     width: 30%;
     padding: 10px;
 }
-.seccion-1{
+
+.seccion-1 {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content: space-between;
     background-image: url(img/fondo-de-pantalla-2.jpg);
-    background-size:cover;
+    background-size: cover;
 }
-.acerca-de{
-    margin-left:5%;
-    display:flex;
+
+.acerca-de {
+    margin-left: 5%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 60%;
 }
-.seccion-2 img{
+
+#carousel img {
     width: 100%;
 }
-/*-*****************Pantallas de maximo 768px*********************-*/
-@media(max-width:768px){
-    .acerca-de{
+
+/* Pantallas de máximo 768px */
+@media(max-width:768px) {
+    .acerca-de {
         width: 100%;
         margin-left: 0%;
+        
     }
-    .seccion-1{
+
+    .seccion-1 {
         background-image: url(img/fondo-pantalla1.jpg);
-        background-size:cover;
+        background-size: cover;
     }
+
     .acerca-imagen {
         margin-top: 15px;
         display: flex;
         justify-content: center;
         width: 100%;
         padding: 25px;
-    } 
-    .parrafo1{
+    }
+
+    .parrafo1 {
         color: white;
     }
-    .acerca-imagen img{
+
+    .acerca-imagen img {
         width: 40%;
         border-radius: 50%;
         border: 3px solid black;
-    } 
+    }
 }
-/*-***************************Cursos******************************-*/
-.cursos{
+
+/* Cursos */
+.cursos {
     background-image: url(img/fondo-de-pantalla-4.jpg);
     background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.card-container{
+
+.card-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     width: 95%;
     margin: 1.5%;
-    
 }
-.card{
+
+.card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -189,86 +242,104 @@ h2 {
     background-color: white;
     border-radius: 1em;
 }
-.card p{
+
+.card p {
     text-align: justify;
     font-size: 12px;
 }
+
 .card img {
     width: 60%;
     height: 60%;
     border-radius: 5%;
 }
-.card h4{
+
+.card h4 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/*-*****************Pantallas de minimo 768px*********************-*/
-@media(min-width:768px){
-    .card-container{
+
+/* Pantallas de mínimo 768px */
+@media(min-width:768px) {
+    .card-container {
         width: 45%;
     }
-    .card p{
+
+    .card p {
         font-size: 15px;
     }
 }
-/*-*****************Pantallas de minimo 1024px********************-*/
-@media(min-width:1024px){
-    .card-container{
+
+/* Pantallas de mínimo 1024px */
+@media(min-width:1024px) {
+    .card-container {
         width: 30%;
     }
-    .card p{
+
+    .card p {
         font-size: 12px;
     }
 }
-/*-***********************Pie de pagina***************************-*/
-footer{
+
+/* Pie de página */
+footer {
     background-color: #3C485E;
     padding: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-h3{
+
+h3 {
     color: goldenrod;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 25px;
     padding: 10px;
     margin: 10px;
 }
-footer ul{
+
+footer ul {
     color: azure;
     padding: 5px;
     margin: 10px;
     border: 2px dashed goldenrod;
     border-radius: 1em;
 }
-footer li{
+
+footer li {
     margin: 5px;
     text-align: center;
 }
-footer li a{
+
+footer li a {
     color: azure;
     cursor: pointer;
 }
-/*-*****************Pantallas de maximo 768px*********************-*/
-@media(max-width:768px){
-footer{
-    background-color: #000000;
+
+/* Pantallas de máximo 768px */
+@media(max-width:768px) {
+    footer {
+        background-color: #000000;
     }
-    footer ul{
+
+    footer ul {
         background-color: white;
         color: #000000;
         border: 5px solid grey;
     }
-    footer li a{
+
+    footer li a {
         color: #000000;
     }
-    h3{
+
+    h3 {
         color: #F8EBEE;
     }
-    .cursos{
+
+    .cursos {
         background-image: url(img/fondo\ pantalla\ 3.jpg);
         background-size: cover;
     }
 }
+
 
