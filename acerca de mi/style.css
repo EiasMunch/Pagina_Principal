@@ -1,85 +1,106 @@
-/*-****************************general CSS**********************-*/
-*{
+/* General Styles */
+* {
     text-decoration: none;
     list-style-type: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #d6ddec;
 }
-.container{
+
+.container {
     width: 100%;
+    max-width: 1200px; /* Limita el ancho del contenido para mejorar la lectura en pantallas grandes */
+    margin: 0 auto; /* Centra el contenido en pantallas grandes */
 }
-/*-****************************Encabezado***********************-*/
-header{
+
+/* Header Styles */
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background-color:#BFB5D7;
+    background-color: #BFB5D7;
 }
-header h3{
-    font-size: 35px;
+
+header h1 {
+    font-size: 2rem;
     color: #3C485E;
     padding: 10px;
+    text-align: left;
 }
+
 .parrafo {
-    font-size: 20px;
-    margin: 5px;
+    font-size: 1rem; /* Tamaño de fuente responsive */
+    margin: 10px; /* Aumenté el margen para mejorar la legibilidad */
     text-align: justify;
     background-color: white;
-}
-.black{
-    color: black
-}
-.pink{
-    color: rgb(214, 93, 114);
-}
-.parrafo{
     border: 1px solid black;
     padding: 1%;
 }
-.parrafo strong{
-    color:rgb(21, 71, 71);
-    cursor: pointer;
+
+.black{
+    color: #000000;
 }
+
+.pink{
+    color: palevioletred;
+}
+
+strong{
+    color: darkslategrey;
+}
+
 i{
-    color: rgb(139, 41, 139);
+    color: rgb(90, 11, 90);
 }
-.parrafo b{
-    color: goldenrod;
-}
-/*-****************************Sección principal***********************-*/
-main{
+
+/* Section Styles */
+main {
     display: flex;
     flex-direction: column;
 }
-.section-1, .section-2, .section-3, .section-4{
+
+/* Sections - Common Styles */
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #97a4bd;
 }
-.section-1{
-    border-bottom: 10px solid #3c4455;
-    border-top: 10px solid #3c4455;
+
+.section-1 {
+    border: 10px solid #3c4455;
 }
-.section-2, .section-3{
+
+.section-2,
+.section-3 {
     border-bottom: 10px solid #3c4455;
 }
-.section-1 h2, .section-2 h2{
+
+.section-1 h2,
+.section-2 h2 {
     margin: 15px;
     font-size: 35px;
 }
-.section-3 h3{
+
+.section-3 h3 {
     color: rgb(225, 229, 248);
-    font-size: 25px;
+    font-size: 1.5rem;
     margin: 15px;
 }
-.section-1 p, .section-2 p, .section-4 p{
+
+.section-1 p,
+.section-2 p,
+.section-4 p,
+.section-3 p {
     border: 1px solid black;
     width: 75%;
     margin: 10px;
@@ -87,21 +108,8 @@ main{
     text-align: justify;
     background-color: #d6ddec;
 }
-.section-3 h6{
-    border: 1px solid black;
-    width: 75%;
-    margin: 25px;
-    padding: 10px;
-    font-size: 30px;
-    text-align: center;
-    background-color: #d6ddec;
-}
-.section-3 p{
-    padding-top: 15px;
-    text-align: center;
-    color: rgb(225, 229, 248);
-}
-.superlist{
+
+.superlist {
     width: 95%;
     margin: 10px;
     display: flex;
@@ -109,70 +117,101 @@ main{
     align-items: center;
     border: 2px solid black;
 }
-.superlist h5{
+
+.superlist h5 {
     margin: 15px;
     font-size: 25px;
 }
-.lista, .lista2{
+
+.lista,
+.lista2 {
     padding: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content: space-around;
 }
-.card{
+
+/* Card Styles */
+.card {
     background-color: #090f1a;
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
     justify-content: center;
     margin: 5px;
     width: 45%;
     padding: 10px;
     align-items: center;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición */
 }
-.card a, .card li{
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+}
+
+.card a,
+.card li {
     padding-top: 15px;
     text-align: center;
     color: rgb(225, 229, 248);
 }
-img{
+
+img {
     width: 100px;
     height: 100px;
 }
-.lista2 img{
+
+.lista2 img {
     width: 100px;
     height: 150px;
 }
-.section-3 img{
+
+.section-3 img {
     width: 200px;
     height: 250px;
 }
-/*-****************************Pantallas maximas de 768px***********************-*/
-@media(max-width:768px){
-    .card{
+
+/* Media Query - Mobile */
+@media(max-width:768px) {
+    .card {
         width: 95%;
     }
-    header{
+
+    header {
         flex-direction: column;
     }
-    .section-1 p, .section-2 p, .section-4 p, .section-3 h6{
+
+    .section-1 p,
+    .section-2 p,
+    .section-4 p,
+    .section-3 h6 {
         width: 60%;
     }
 }
-/*-****************************Pantallas mayores de 1024px***********************-*/
-@media(min-width:1024px){
-    .card{
+
+/* Media Query - Tablets and larger */
+@media(min-width:1024px) {
+    .card {
         width: 30%;
     }
-    .superlist{
-    border:none;
+
+    .superlist {
+        border: none;
     }
-    .section-1 p, .section-2 p, .section-4 p, .section-3 h6{
+
+    .section-1 p,
+    .section-2 p,
+    .section-4 p,
+    .section-3 h6 {
         width: 95%;
     }
-    .lista, .lista2{
+
+    .lista,
+    .lista2 {
         width: 100%;
         flex-wrap: nowrap;
     }
 }
+

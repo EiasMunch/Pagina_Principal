@@ -1,41 +1,54 @@
 
-/*-****************************General CSS***********************-*/
-body{
-    background-color: #F8EBEE;
+/* General CSS */
+body {
+    background-color: #f8ebee;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 20px;
 }
-/*-****************************Cards de certificados***********************-*/
-.certificado{
+
+/* Cards de certificados */
+.certificado {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 5px;
+    padding: 20px;
     width: 95%;
-    margin: 5px;
-    border: 2px solid black;
+    margin: 20px;
+    border: 2px solid #000;
     border-radius: 1em;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
+
+.certificado:hover {
+    transform: scale(1.05);
+}
+
 .certificado img {
-    width: 80%;
-    height: 60%;
+    width: 100%;
+    height: auto;
     border-radius: 5%;
 }
-/*-****************************Pantallas mayores a 768px***********************-*/
-@media(min-width:768px){
-    .certificado{
+
+/* Pantallas mayores a 768px */
+@media (min-width: 768px) {
+    .certificado {
         width: 45%;
     }
 }
-/*-****************************Pantallas mayores a 1024px***********************-*/
-@media(min-width:1024px){
-    .certificado{
+
+/* Pantallas mayores a 1024px */
+@media (min-width: 1024px) {
+    .certificado {
         width: 30%;
     }
 }
-
-

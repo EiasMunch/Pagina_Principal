@@ -12,7 +12,7 @@
     --header-background-color: #3C485E;
     --header-text-color: #BFB5D7;
     --nav-text-color: #FFF;
-    --nav-font-size: 1.5em;
+    --nav-font-size: 1em;
     --link-color: goldenrod;
     --footer-background-color: #3C485E;
     --footer-text-color: azure;
@@ -228,6 +228,11 @@ h2 {
     justify-content: center;
     width: 95%;
     margin: 1.5%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-container:hover {
+    transform: scale(1.05);
 }
 
 .card {

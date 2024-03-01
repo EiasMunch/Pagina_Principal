@@ -2,28 +2,36 @@ const form = document.getElementById("form");
 const nombre = document.getElementById("nombre");
 const parrafo = document.getElementById("alertas");
 
+function mostrarMensajeError(mensaje) {
+    parrafo.innerHTML = mensaje;
+}
+
+function validarNombre() {
+    if (nombre.value.trim().length < 3) {
+        mostrarMensajeError("El nombre debe contener más de 2 caracteres.");
+        return false;
+    }
+    return true;
+}
+
 function validarFormulario() {
-let warnings = "";
-let valido = true;
-parrafo.innerHTML = "";
+    parrafo.innerHTML = "";
 
-if (nombre.value.length < 3) {
-    warnings += `El nombre debe contener más de 2 carcateres. `;
-    valido = false;
+    const nombreValido = validarNombre();
+
+    return nombreValido;
 }
 
-if (!valido) {
-    parrafo.innerHTML = warnings;
-} else {
-    parrafo.innerHTML = "Enviado";
-}
-return valido;
-}
 form.addEventListener("submit", (e) => {
-if (validarFormulario()) {
-    // Si la validación es exitosa, puedes enviar el formulario
-    formulario.submit();
-} else {
     e.preventDefault(); // Evita que el formulario se envíe automáticamente
-}
+
+    if (validarFormulario()) {
+        form.submit();
+    }
 });
+
+nombre.addEventListener("focus", () => {
+    mostrarMensajeError(""); // Limpia el mensaje de error al enfocar el campo
+});
+
+nombre.addEventListener("blur", validarNombre); // Valida el nombre al perder el enfoque
